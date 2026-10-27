@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sweatyswan.github.io/heartware-nahlad/sitemap.xml

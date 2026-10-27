@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+
+<html lang="sk"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Poradíme vám zdarma | Heartware</title><meta name="description" content="Opíšte, s čím potrebujete pomôcť. Krátky formulár zobrazí len otázky, ktoré sú pre vašu situáciu podstatné. Ozveme sa vám osobne." />
+<link rel="stylesheet" href="style.css" /><link rel="icon" type="image/png" href="favicon.png" />
+<style>.nav-menu{position:relative}.nav-menu summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px}.nav-menu summary::-webkit-details-marker{display:none}.nav-menu summary:after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}.nav-menu summary.active{border-bottom:2px solid var(--ink)}.nav-menu-panel{position:absolute;top:calc(100% + 8px);left:-24px;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:4px 48px;width:620px;padding:24px;background:var(--bg);border:1px solid var(--border);border-radius:10px}.nav .nav-menu-panel a{display:block;min-height:0;padding:7px 0;font-weight:500;white-space:normal}.nav-menu-heading{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}.nav .nav-menu-panel a.nav-menu-all{grid-column:1/-1;margin-top:10px;padding-top:14px;border-top:1px solid var(--border);color:var(--blue);font-weight:600}mark.todo{background:#FFF5CC;color:#5B4B00;padding:0 3px;border-radius:3px;font-weight:600}</style>
+<script type="application/ld+json" data-hw-ld="">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Poradíme vám zdarma", "item": "https://heartware.sk/dopyt.html"}]}</script>
+<style id="dopyt-form">
+/* UI42: vizuálna úprava formulára (dopyt). Platí len pre #dopyt a .form-shell. */
+.form-shell{max-width:520px;padding:32px}
+#dopyt fieldset{border:0;padding:0;margin:0;min-width:0}
+#dopyt legend{padding:0;width:100%}
+#dopyt .form-step-heading{font-size:26px;line-height:1.2;margin:0 0 8px}
+#dopyt .form-step-heading:focus{outline:none}
+#dopyt .form-intro{font-size:16px;margin:0 0 28px}
+#dopyt .progress{gap:6px;margin-bottom:12px}
+#dopyt .progress span{height:6px}
+#dopyt .progress-copy{margin:0 0 28px;font-size:14px}
+#dopyt .field{gap:8px;margin:0 0 24px}
+#dopyt .field label{font-size:16px;font-weight:600;line-height:1.35}
+#dopyt .field label .helper{font-weight:400}
+#dopyt .helper{font-size:14px;line-height:1.45;color:var(--muted)}
+#dopyt .field input:not([type=checkbox]):not([type=file]),#dopyt .field select,#dopyt .field textarea{font-size:16px;min-height:48px;border:1px solid #80868D;border-radius:8px;padding:12px 14px}
+#dopyt .field textarea{min-height:132px;resize:vertical}
+#dopyt .field input[type=file]{font-size:15px;min-height:48px;padding:11px 12px;border:1px dashed #80868D;border-radius:8px}
+#dopyt .field input::placeholder,#dopyt .field textarea::placeholder{color:var(--muted);opacity:1}
+#dopyt .field :is(input,select,textarea):focus-visible{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+#dopyt .field-error{display:flex;gap:8px;align-items:flex-start;margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#B3261E}
+#dopyt .field-error[hidden]{display:none}
+#dopyt .field-error::before{content:"!";flex:none;width:18px;height:18px;border-radius:50%;background:#B3261E;color:#fff;font-size:12px;font-weight:700;line-height:18px;text-align:center}
+#dopyt .field [aria-invalid="true"]{border-color:#B3261E!important;box-shadow:inset 0 0 0 1px #B3261E!important}
+#dopyt .consent-line{display:grid!important;grid-template-columns:24px 1fr;gap:12px!important;align-items:start;font-size:15px!important;line-height:1.5;padding:6px 0}
+#dopyt .consent-line input{width:24px!important;height:24px;margin:0!important;accent-color:var(--blue)}
+#dopyt .select-cards{display:grid;grid-template-columns:1fr;gap:12px;margin:0}
+#dopyt .select-card{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:16px;min-height:76px;padding:16px 18px;border:1px solid #80868D;border-radius:10px}
+#dopyt .select-card b{font-size:17px;line-height:1.3;grid-column:1}
+#dopyt .select-card span{font-size:14px;line-height:1.45;margin-top:4px;grid-column:1}
+#dopyt .select-card::after{content:"\2192";grid-column:2;grid-row:1/span 2;color:var(--blue);font-size:22px}
+#dopyt .select-card:hover,#dopyt .select-card:focus-visible{border-color:var(--blue);background:#F4F8FC}
+#dopyt .more{margin:0 0 24px}
+#dopyt .more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;min-height:48px;color:var(--blue);font-size:16px;font-weight:600}
+#dopyt .more>summary::-webkit-details-marker{display:none}
+#dopyt .more>summary::before{content:"+";flex:none;width:24px;height:24px;border:1px solid currentColor;border-radius:50%;display:inline-grid;place-items:center;font-size:18px;line-height:1}
+#dopyt .more[open]>summary::before{content:"\2013"}
+#dopyt .more>summary small{font-size:14px;font-weight:400;color:var(--muted)}
+#dopyt .more-body{padding-top:16px}
+#dopyt .form-assurance{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
+#dopyt .form-actions{margin-top:28px}
+#dopyt .btn{min-height:52px;font-size:16px}
+@media(max-width:900px){
+.page-hero{padding:28px 0 44px}
+.inquiry-layout{gap:28px}
+.inquiry-aside h1{font-size:32px}
+.inquiry-aside .breadcrumbs{margin-bottom:12px}
+.inquiry-aside .lead{font-size:16px;margin-top:12px}
+.form-shell{padding:20px 16px;border-radius:10px}
+#dopyt .form-actions{position:sticky;bottom:0;z-index:5;margin:24px -16px -20px;padding:12px 16px;background:#fff;border-top:1px solid var(--border)}
+}
+</style>
+</head><body>
+<!-- UI42 / STRATÉGIA: obsah podľa „Strategická analýza a zadanie webu“ + zápis z meetingu 13. 10. 2026. Žlté [DOPLNIŤ] = chýbajúci fakt od klienta. Komentáre UI42 sú interné. -->
+<header class="header"><div class="container inner">
+<a class="brand" href="index.html" aria-label="Heartware – domov"><img alt="Heartware" src="logo.png" /></a>
+<nav class="nav" aria-label="Hlavná navigácia"><details class="nav-menu"><summary class="">Riešenia</summary><div class="nav-menu-panel"><div><p class="nav-menu-heading">Podľa priestoru</p><a href="skoly.html">Školy a vzdelávanie</a><a href="firmy.html">Firmy a organizácie</a><a href="hotely-konferencne-priestory.html">Hotely a konferenčné priestory</a><a href="kultura.html">Múzeá, galérie a divadlá</a><a href="zdravotnictvo-grafika.html">Zdravotníctvo a grafika</a></div><div><p class="nav-menu-heading">Podľa technológie</p><a href="interaktivne-technologie.html">Interaktívne a prezentačné technológie</a><a href="projekcia-av.html">Projekcia a AV</a><a href="videokonferencie.html">Videokonferencie</a><a href="digital-signage.html">Digital signage</a><a href="inteligentne-kancelarie.html">Inteligentné kancelárie a správa IT</a><a href="robotika-steam-vr.html">Robotika, STEAM a VR</a><a href="simulatory.html">Simulátory</a></div><a class="nav-menu-all" href="riesenia.html">Všetky riešenia →</a></div></details><a class="" href="eshop.html">E-shop</a><a class="" href="poradenstvo-a-servis.html">Poradenstvo a servis</a><a class="" href="referencie.html">Referencie</a><a class="" href="kto-za-tym-stoji.html">Kto za tým stojí</a></nav>
+<!-- UI42: „Riešenia“ = rozbaľovacie menu podľa priestoru a podľa technológie (stratégia 5A). Na mobile vedie na prehľad riesenia.html. -->
+<div class="tools">
+<a class="tool" href="eshop.html#hladat" aria-label="Hľadať"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg><span>Hľadať</span></a>
+<a class="tool" href="#kosik" data-native="shopify-cart" aria-label="Košík"><svg viewbox="0 0 24 24"><path d="M3 5h2l2 11h10l2-7H7"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span>Košík</span></a>
+<a data-track="dopyt" class="btn secondary small" href="dopyt.html?vstup=poradenstvo&amp;zdroj=dopyt">Poradíme vám zdarma</a>
+<details class="mobile-menu"><summary aria-label="Otvoriť hlavné menu"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<div class="mobile-drawer" role="dialog" aria-label="Hlavné menu"><div class="mobile-drawer-inner container">
+<nav class="mobile-drawer-nav" aria-label="Mobilná navigácia"><a href="riesenia.html">Riešenia <span>→</span></a><a href="eshop.html">E-shop <span>→</span></a><a href="poradenstvo-a-servis.html">Poradenstvo a servis <span>→</span></a><a href="referencie.html">Referencie <span>→</span></a><a href="kto-za-tym-stoji.html">Kto za tým stojí <span>→</span></a></nav>
+<a data-track="dopyt" class="btn primary mobile-drawer-cta" href="dopyt.html?vstup=poradenstvo&amp;zdroj=dopyt">Poradíme vám zdarma</a>
+<div class="mobile-drawer-utility"><a href="tel:+421903134134">0903 134 134</a><a href="mailto:info@heartware.sk">info@heartware.sk</a></div>
+</div></div></details>
+</div></div></header>
+<main>
+<!-- DOPYT — stratégia 6A. Začína situáciou zákazníka (3 vstupy), nie otázkou „kto ste“. Ďalšie otázky podľa voľby. Jeden stĺpec do 500 px, popisy nad poľami, označené len nepovinné polia, chyba pod poľom, jeden súhlas bez marketingových súhlasov.
+     Natívny Shopify formulár neprijíma súbory, nepotvrdzuje a nevedie stav → nástroj na prílohy a evidenciu vyberie klient (stratégia 6B, 10/6). Mimo Google. -->
+<section class="page-hero"><div class="container inquiry-layout">
+<aside class="inquiry-aside">
+<div class="breadcrumbs">Poradíme vám zdarma</div>
+<div class="eyebrow">Bez záväzku</div>
+<h1>Opíšte nám, čo potrebujete</h1>
+<p class="lead">Spýtame sa len na to, čo je pre vašu situáciu podstatné. Potom sa vám ozveme zvoleným spôsobom.</p>
+<p class="mini">Radšej voláte? <a href="tel:+421903134134">0903 134 134</a> · <a href="mailto:info@heartware.sk">info@heartware.sk</a></p>
+</aside>
+<div class="form-shell">
+<form id="dopyt" action="dakujeme.html" method="get" novalidate="">
+<div class="progress" aria-hidden="true"><span class="active"></span><span></span><span></span></div>
+<p class="progress-copy"><span>Krok <b id="krok-cislo">1</b> z 3</span><span id="krok-nazov">Situácia</span></p>
+<!-- KROK 1 -->
+<fieldset class="form-step choice-fieldset" data-step="1">
+<legend><h2 class="form-step-heading">S čím potrebujete pomôcť?</h2></legend>
+<div class="select-cards" data-choice="vstup">
+<button type="button" class="select-card" data-value="poradenstvo" aria-pressed="false"><b>Potrebujem poradiť</b><span>Neviem, čo vybrať, alebo mám ponuku a chcem druhý názor.</span></button>
+<button type="button" class="select-card" data-value="servis" aria-pressed="false"><b>Niečo nefunguje</b><span>Zariadenie sa nedá sprevádzkovať, chýba postup alebo nikto nevie poradiť.</span></button>
+<button type="button" class="select-card" data-value="dodavka" aria-pressed="false"><b>Plánujem dodávku</b><span>Chcem dovybaviť triedy, zasadačku alebo celú budovu.</span></button>
+</div>
+<input type="hidden" name="vstup" id="vstup" />
+<p class="field-error" id="err-vstup" hidden="">Vyberte, s čím potrebujete pomôcť.</p>
+</fieldset>
+<!-- KROK 2 -->
+<fieldset class="form-step" data-step="2" hidden="">
+<legend><h2 class="form-step-heading">Povedzte nám to najdôležitejšie</h2></legend>
+<p class="form-intro">Stačí stručne a vlastnými slovami. Technické názvy ani diagnózu nečakáme.</p>
+<p class="notice" id="kontext-produkt" hidden="">Píšete nám k produktu: <b id="kontext-produkt-nazov"></b></p><div class="field" data-when="produkt" hidden=""><label for="pocet">Koľko kusov potrebujete?</label><input id="pocet" name="pocet" type="number" min="1" inputmode="numeric" placeholder="1" /></div>
+<div data-route="poradenstvo" hidden="">
+<div class="field"><label for="p-situacia">Čo potrebujete vyriešiť?</label><textarea id="p-situacia" name="p_situacia" required="" placeholder="Napríklad: chceme dovybaviť dve triedy a nevieme, či zvoliť displej alebo tabuľu s projektorom."></textarea><p class="field-error" hidden="">Napíšte aspoň pár slov o tom, čo riešite.</p><span class="helper">Napíšte aj, kto bude techniku používať a čo má byť výsledkom.</span></div>
+<div class="field"><label for="p-typ">Pre koho to riešite? <span class="helper">(nepovinné)</span></label><select id="p-typ" name="typ_organizacie" data-typ=""></select></div><div class="field" data-when="typ:jednotlivec" hidden=""><label for="p-ucel">Na čo bude zariadenie slúžiť a aké programy má zvládnuť? <span class="helper">(nepovinné)</span></label><textarea id="p-ucel" name="p_ucel"></textarea><span class="helper">Pri výbere pre dieťa môžete doplniť vek alebo ročník a požiadavky školy.</span></div>
+<details class="more"><summary>Doplniť podrobnosti <small>nepovinné, pomôže nám pripraviť sa</small></summary><div class="more-body">
+<div class="field"><label for="p-lokalita">Mesto alebo obec</label><input id="p-lokalita" name="lokalita" autocomplete="address-level2" /></div>
+<div class="field"><label for="p-termin">Dokedy to potrebujete?</label><select id="p-termin" name="termin" data-termin=""></select></div>
+<div class="field"><label for="p-prilohy">Fotky alebo ponuka, ktorú už máte</label><input id="p-prilohy" name="prilohy" type="file" multiple="" accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx" /><span class="helper">Fotky miestnosti alebo cenovú ponuku od iného dodávateľa, ak ju môžete zdieľať. Dá sa priamo z mobilu.</span><span class="helper" data-when="typ:zdravotnictvo" hidden="">Pred priložením odstráňte údaje pacientov a iné citlivé osobné údaje.</span></div>
+</div></details>
+</div>
+<div data-route="servis" hidden="">
+<div class="field"><label for="s-zariadenie">Aké zariadenie?</label><input id="s-zariadenie" name="s_zariadenie" required="" placeholder="Displej, projektor, interaktívna tabuľa…" /><p class="field-error" hidden="">Napíšte, o aké zariadenie ide.</p></div>
+<div class="field"><label for="s-problem">Čo zariadenie robí alebo nerobí?</label><textarea id="s-problem" name="s_problem" required="" placeholder="Napríklad: displej sa zapne, ale nereaguje na dotyk."></textarea><p class="field-error" hidden="">Opíšte, čo zariadenie robí alebo nerobí.</p></div>
+<div class="field"><label for="s-lokalita">Kde sa zariadenie nachádza?</label><input id="s-lokalita" name="lokalita" required="" autocomplete="address-level2" placeholder="Napríklad: Banská Bystrica" /><p class="field-error" hidden="">Napíšte mesto alebo obec.</p></div>
+<div class="field"><label for="s-obmedzenie">Ako veľmi vás to obmedzuje? <span class="helper">(nepovinné)</span></label><select id="s-obmedzenie" name="s_obmedzenie"><option value="">Vyberte</option><option>Zariadenie sa nedá používať</option><option>Funguje, ale s problémom</option><option>Treba len kontrolu alebo nastavenie</option></select></div>
+<details class="more"><summary>Pridať fotku alebo model <small>často ušetrí výjazd</small></summary><div class="more-body">
+<div class="field"><label for="s-prilohy">Fotka alebo krátke video</label><input id="s-prilohy" name="prilohy" type="file" multiple="" accept="image/*,video/*" /><span class="helper">Dá sa priamo z mobilu.</span></div>
+<div class="field"><label for="s-model">Značka a model</label><input id="s-model" name="s_model" /></div>
+<div class="field"><label for="s-kupa">Kúpili ste ho u nás?</label><select id="s-kupa" name="s_kupa"><option value="">Vyberte</option><option>Áno</option><option>Nie</option><option>Neviem</option></select></div>
+</div></details>
+</div>
+<div data-route="dodavka" hidden="">
+<div class="field"><label for="d-typ">Pre koho dodávku plánujete?</label><select id="d-typ" name="typ_organizacie" required="" data-typ=""></select><p class="field-error" hidden="">Vyberte, pre koho dodávku plánujete.</p></div><div class="field" data-when="typ:skola" hidden=""><label for="d-triedy">Koľko tried riešite a koľko žiakov v nich bude techniku používať? <span class="helper">(nepovinné)</span></label><input id="d-triedy" name="d_triedy" /></div><div class="field" data-when="typ:firma hotel" hidden=""><label for="d-miestnosti">Koľko miestností riešite a na čo budú slúžiť? <span class="helper">(nepovinné)</span></label><input id="d-miestnosti" name="d_miestnosti" /></div><div class="field" data-when="typ:zdravotnictvo" hidden=""><label for="d-zobrazovanie">Aký typ práce alebo zobrazovania má monitor podporovať? <span class="helper">(nepovinné)</span></label><input id="d-zobrazovanie" name="d_zobrazovanie" /></div>
+<div class="field"><label for="d-co">Čo plánujete?</label><textarea id="d-co" name="d_co" required="" placeholder="Napríklad: 3 triedy, v jednej je stará tabuľa s projektorom. Alebo: zasadačka pre 12 ľudí s videohovormi."></textarea><p class="field-error" hidden="">Napíšte, aké zariadenia alebo koľko miestností plánujete.</p></div><div class="field"><label for="d-ponechat">Čo už používate a čo z toho chcete ponechať? <span class="helper">(nepovinné)</span></label><textarea id="d-ponechat" name="d_ponechat"></textarea></div>
+<div class="field"><label for="d-termin">Dokedy to potrebujete?</label><select id="d-termin" name="termin" required="" data-termin=""></select><p class="field-error" hidden="">Vyberte termín. Ak ešte neviete, zvoľte „Zatiaľ zisťujem“.</p></div><fieldset class="field"><legend>Potrebujete iba dodanie alebo aj montáž a nastavenie?</legend><label class="consent-line"><input type="radio" name="d_montaz" value="iba-dodanie" /><span>Iba dodanie</span></label><label class="consent-line"><input type="radio" name="d_montaz" value="montaz" checked="" /><span>Aj montáž a nastavenie</span></label></fieldset>
+<details class="more"><summary>Doplniť podrobnosti <small>nepovinné, pomôže nám pripraviť sa</small></summary><div class="more-body">
+<div class="field"><label for="d-lokalita">Mesto alebo obec</label><input id="d-lokalita" name="lokalita" autocomplete="address-level2" /></div><div class="field"><label for="d-rozpocet">Máme zohľadniť rozpočet alebo iné obmedzenie? <span class="helper">(nepovinné)</span></label><input id="d-rozpocet" name="d_rozpocet" /></div>
+<div class="field" id="d-schvaluje-field"><label for="d-schvaluje">Kto nákup schvaľuje?</label><select id="d-schvaluje" name="schvaluje"><option value="">Vyberte</option><option value="vedenie-skoly">Vedenie školy</option><option value="zriadovatel">Zriaďovateľ</option><option value="rodicia">Rodičia alebo rodičovské združenie</option><option value="vedenie-firmy">Vedenie firmy alebo organizácie</option><option value="ine">Iné</option><option value="neviem">Zatiaľ neviem</option></select><span class="helper">Podľa toho pripravíme podklad, ktorým nákup obhájite.</span></div>
+<div class="field"><label for="d-prilohy">Pôdorys, fotky alebo ponuka</label><input id="d-prilohy" name="prilohy" type="file" multiple="" accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx" /><span class="helper">Ponuku od iného dodávateľa priložte, len ak ju môžete zdieľať.</span><span class="helper" data-when="typ:zdravotnictvo" hidden="">Pred priložením odstráňte údaje pacientov a iné citlivé osobné údaje.</span></div>
+</div></details>
+</div>
+<div class="form-actions"><button type="button" class="btn secondary" data-back="">Späť</button><button type="button" class="btn primary" data-next="">Ďalej: kontakt</button></div>
+</fieldset>
+<!-- KROK 3 -->
+<fieldset class="form-step" data-step="3" hidden="">
+<legend><h2 class="form-step-heading">Ako sa vám máme ozvať?</h2></legend>
+<p class="form-intro">Vyberte si, či sa máme ozvať telefonicky alebo e-mailom. Potvrdenie prijatia pošleme e-mailom.</p><fieldset class="field"><legend>Ako sa vám máme ozvať?</legend><label class="consent-line"><input type="radio" name="kanal" value="telefon" checked="" /><span>Telefonicky</span></label><label class="consent-line"><input type="radio" name="kanal" value="email" /><span>E-mailom</span></label></fieldset>
+<div class="field"><label for="meno">Meno a priezvisko</label><input id="meno" name="meno" required="" autocomplete="name" /><p class="field-error" hidden="">Napíšte, ako vás máme osloviť.</p></div>
+<div class="field" id="organizacia-field"><label for="organizacia">Škola, firma alebo organizácia <span class="helper">(nepovinné)</span></label><input id="organizacia" name="organizacia" autocomplete="organization" /></div>
+<div class="field"><label for="telefon">Telefón</label><input id="telefon" name="telefon" type="tel" inputmode="tel" required="" autocomplete="tel" pattern="[0-9+\(\)\/\s\-]{9,}" placeholder="0903 123 456" /><p class="field-error" hidden="">Napíšte telefónne číslo v tvare 0903 123 456.</p></div>
+<div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" required="" autocomplete="email" placeholder="meno@skola.sk" /><p class="field-error" hidden="">Zadajte e-mail v tvare meno@skola.sk.</p></div>
+<p class="form-intro">Údaje použijeme na vybavenie vašej požiadavky. Podrobnosti nájdete v časti <a href="#ochrana-udajov" data-native="shopify-policy">Ochrana osobných údajov</a>.</p>
+<!-- Prenesený kontext (stratégia 6A: známe údaje sa znova nepýtajú) -->
+<input type="hidden" name="zdroj" id="h-zdroj" /><input type="hidden" name="produkt" id="h-produkt" /><input type="hidden" name="sku" id="h-sku" /><input type="hidden" name="segment" id="h-segment" /><input type="hidden" name="technologia" id="h-technologia" /><input type="hidden" name="source_url" id="h-url" /><input type="hidden" name="utm_source" id="h-utm_source" /><input type="hidden" name="utm_medium" id="h-utm_medium" /><input type="hidden" name="utm_campaign" id="h-utm_campaign" />
+<p class="form-assurance">Požiadavku si prečítame a ozveme sa vám zvoleným spôsobom.</p>
+<div class="form-actions"><button type="button" class="btn secondary" data-back="">Späť</button><button type="submit" class="btn primary">Odoslať požiadavku</button></div>
+</fieldset>
+</form>
+</div>
+</div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-top">
+<div><a class="footer-logo" href="index.html" aria-label="Heartware – domov"><img src="logo.png" alt="Heartware" /></a>
+<p class="footer-statement">Technika pre školy, firmy aj domácnosti. S odborným výberom a starostlivosťou po dodaní.</p>
+<p class="footer-company">Heartware je značka spoločnosti jump In! s.r.o.<br />IČO 46710221 · <mark class="todo">[DOPLNIŤ: sídlo, DIČ, IČ DPH, zápis v OR]</mark></p></div>
+<div><p class="footer-heading">Riešenia</p><a href="skoly.html">Školy a vzdelávanie</a><a href="firmy.html">Firmy a organizácie</a><a href="hotely-konferencne-priestory.html">Hotely a konferenčné priestory</a><a href="kultura.html">Múzeá, galérie a divadlá</a><a href="zdravotnictvo-grafika.html">Zdravotníctvo a grafika</a><a href="riesenia.html">Všetky riešenia</a></div>
+<div><p class="footer-heading">Heartware</p><a href="ako-to-funguje.html">Ako to funguje</a><a href="poradenstvo-a-servis.html">Poradenstvo a servis</a><a href="eshop.html">E-shop</a><a href="referencie.html">Referencie</a><a href="kto-za-tym-stoji.html">Kto za tým stojí</a></div>
+<div><p class="footer-heading">Kontakt</p><p><a href="tel:+421903134134">0903 134 134</a></p><p><a href="mailto:info@heartware.sk">info@heartware.sk</a></p><p><a data-track="dopyt" href="dopyt.html?vstup=poradenstvo&amp;zdroj=paticka">Poradíme vám zdarma</a></p>
+<!-- UI42: právne stránky sú natívne stránky politík Shopify -->
+<p><a href="#obchodne-podmienky" data-native="shopify-policy">Obchodné podmienky</a></p><p><a href="#reklamacie" data-native="shopify-policy">Reklamácie a vrátenie</a></p><p><a href="#ochrana-udajov" data-native="shopify-policy">Ochrana osobných údajov</a></p></div>
+</div><div class="footer-bottom"><span>© jump In! s.r.o. · Heartware</span><span>Slovensko</span></div></div></footer>
+<script>
+document.querySelectorAll('.mobile-drawer a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});
+</script>
+<script src="dopyt.js"></script><script>(function(){var m=document.querySelector(".nav-menu");if(!m)return;document.addEventListener("click",function(e){if(!m.contains(e.target))m.removeAttribute("open");});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m.open){m.removeAttribute("open");m.querySelector("summary").focus();}});})();</script>
+
+
+
+<script>
+/* Polia z feedbacku klienta. Sú viditeľné od kola Klient feedback #1, aj v ďalších návrhoch ui42. */
+(function () {
+  var form = document.getElementById('dopyt'); if (!form) return;
+  var q = new URLSearchParams(location.search);
+  function alt() { return true; }
+  function update() {
+    var ui = alt();
+    form.querySelectorAll('[data-when]').forEach(function (el) {
+      var w = el.getAttribute('data-when'), on = ui;
+      if (w === 'produkt') on = ui && !!q.get('produkt');
+      else if (w.indexOf('typ:') === 0) {
+        var route = el.closest('[data-route]'); var sel = route && route.querySelector('[data-typ]');
+        on = ui && !!sel && w.slice(4).split(' ').indexOf(sel.value) > -1;
+      }
+      el.hidden = !on;
+    });
+    var tel = document.getElementById('telefon');
+    var email = form.querySelector('input[name="kanal"][value="email"]');
+    tel.required = !(ui && email && email.checked);
+  }
+  form.addEventListener('change', update);
+  window.addEventListener('hw:textmode', update);
+  update();
+})();
+</script></body></html>
